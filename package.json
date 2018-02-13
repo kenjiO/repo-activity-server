@@ -1,0 +1,17 @@
+{
+  "name": "repo-activity-server",
+  "version": "1.0.0",
+  "description": "A server for badges indicating the last commit date",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "repo-activity"
+  ],
+  "author": "Kenji Okamoto",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
