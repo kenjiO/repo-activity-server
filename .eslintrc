@@ -1,0 +1,17 @@
+{
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-base"
+  ],
+  "rules": {
+    "arrow-body-style": "off",
+    "no-console": [
+      "error", { "allow": [ "info", "warn", "error" ] }
+    ],
+    "no-use-before-define": ["error", { "functions": false, "classes": true }]
+
+  }
+}
