@@ -1,4 +1,5 @@
 ![Last Commit](https://repo-activity.herokuapp.com/v1/kenjio/repo-activity-server)
+[![Build Status](https://travis-ci.org/kenjiO/repo-activity-server.svg?branch=master)](https://travis-ci.org/kenjiO/repo-activity-server)
 
 ## Background
 
