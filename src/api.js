@@ -28,8 +28,8 @@ router.get('/:user/:repo', (req, res, next) => {
           <path fill="url(#b)" d="M0 0h162v20H0z"/>
         </g>
         <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110">
-          <text x="405" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="690">Last Commit</text>
-          <text x="405" y="140" transform="scale(.1)" textLength="690">Last Commit</text>
+          <text x="405" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="690">last commit</text>
+          <text x="405" y="140" transform="scale(.1)" textLength="690">last commit</text>
           <text x="1155" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="650">${date}</text>
           <text x="1155" y="140" transform="scale(.1)" textLength="650">${date}</text>
         </g>

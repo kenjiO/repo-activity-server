@@ -47,6 +47,14 @@ describe('app', () => {
       });
   });
 
+  it('it\'s response contains the phrase "last commit"', () => {
+    return request(app).get('/v1/userX/repo-2000-02-03')
+      .then((response) => {
+        const svg = response.body.toString();
+        expect(svg.match(/<text.*>last commit<\/text>/)).not.toBeNull();
+      });
+  });
+
   it('it\'s response contains the date returned from userX/repo-2000-02-03', () => {
     return request(app).get('/v1/userX/repo-2000-02-03')
       .then((response) => {
