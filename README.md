@@ -31,5 +31,5 @@ So the badge for this repository on that server is at
 
 
 To add the badge to a README.md file use the following format  
-`![Last Commit](https://repo-activity.herokuapp.com/v1/kenjio/repo-activity-serve\)`
+`![Last Commit](https://repo-activity.herokuapp.com/v1/kenjio/repo-activity-server)`
 
