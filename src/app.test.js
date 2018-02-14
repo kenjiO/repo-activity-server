@@ -9,11 +9,34 @@ describe('app', () => {
       });
   });
 
-  it('sets the content-type to svg', () => {
-    return request(app).get('/v1/userX/repo-2000-02-03')
-      .then((response) => {
-        expect(response.headers['content-type']).toContain('image/svg+xml');
-      });
+  describe('response headers', () => {
+    it('sets the content-type to svg', () => {
+      return request(app).get('/v1/userX/repo-2000-02-03')
+        .then((response) => {
+          expect(response.headers['content-type']).toContain('image/svg+xml');
+        });
+    });
+
+    it('sets the cache-control header to not cache', () => {
+      return request(app).get('/v1/userX/repo-2000-02-03')
+        .then((response) => {
+          expect(response.headers['cache-control']).toBe('no-cache, no-store, must-revalidate');
+        });
+    });
+
+    it('sets the pragma header to no-cache', () => {
+      return request(app).get('/v1/userX/repo-2000-02-03')
+        .then((response) => {
+          expect(response.headers.pragma).toBe('no-cache');
+        });
+    });
+
+    it('sets the expires header to -1', () => {
+      return request(app).get('/v1/userX/repo-2000-02-03')
+        .then((response) => {
+          expect(response.headers.expires).toBe('-1');
+        });
+    });
   });
 
   it('responds with a svg graphic', () => {

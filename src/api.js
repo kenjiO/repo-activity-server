@@ -34,7 +34,11 @@ router.get('/:user/:repo', (req, res, next) => {
           <text x="1155" y="140" transform="scale(.1)" textLength="650">${date}</text>
         </g>
       </svg>`;
-      res.type('svg').send(svgResult);
+      res.header('cache-control', 'no-cache, no-store, must-revalidate');
+      res.header('expires', '-1');
+      res.header('pragma', 'no-cache');
+      res.type('svg');
+      res.send(svgResult);
     })
     .catch((err) => {
       if (err.message === '404 Not Found') {
